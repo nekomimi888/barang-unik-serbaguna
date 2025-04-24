@@ -4,69 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Barang Unik Serbaguna</title>
-
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <style>
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1rem;
+      border-radius: 10px;
+    }
     .carousel-item img {
       max-height: 500px;
       object-fit: cover;
-      width: 100%;
     }
-
-    .carousel-caption {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 1rem;
-      border-radius: 1rem;
-    }
-
-    .btn-primary {
-      background-color: #ff6f00;
-      border: none;
-    }
-
-    .btn-primary:hover {
-      background-color: #e65c00;
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-      display: flex !important;
-    }
-
     .scroll-down-btn {
-      display: flex;
-      justify-content: center;
       margin-top: 1rem;
     }
-
-    .scroll-down-btn a {
-      text-decoration: none;
-      color: #ff6f00;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      font-size: 1.1rem;
-    }
-
-    .scroll-down-btn a:hover {
-      text-decoration: underline;
-    }
-
     @media (max-width: 768px) {
-      .carousel-item img {
-        max-height: 300px;
-      }
-
       .carousel-caption {
         font-size: 0.9rem;
-        padding: 0.75rem;
       }
-    }
-
-    footer {
-      margin-top: 3rem;
     }
   </style>
 </head>
@@ -95,17 +51,11 @@
   <!-- Hero Section with Carousel -->
   <section class="hero py-5">
     <div class="container">
-      <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active"></button>
-          <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2"></button>
-        </div>
-
+      <div id="productCarousel" class="carousel slide" data-bs-touch="true" data-bs-ride="carousel" data-bs-interval="6000">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="https://media.dekoruma.com/article/2018/11/30091038/freshome.jpg" class="d-block w-100" alt="Dispenser Sabun Otomatis">
-            <div class="carousel-caption d-block">
+            <div class="carousel-caption">
               <h5>Dispenser Sabun Otomatis</h5>
               <p>Sentuh tanpa tangan, cocok buat kamar mandi modern!</p>
               <a href="https://shopee.co.id/dummy1" class="btn btn-primary" target="_blank">Lihat di Shopee</a>
@@ -113,7 +63,7 @@
           </div>
           <div class="carousel-item">
             <img src="https://media.dekoruma.com/article/2018/11/30091038/freshome.jpg" class="d-block w-100" alt="Gunting Dapur 6 in 1">
-            <div class="carousel-caption d-block">
+            <div class="carousel-caption">
               <h5>Gunting Dapur 6 in 1</h5>
               <p>Bisa motong, ngupas, bahkan buka botol. Multifungsi banget!</p>
               <a href="https://shopee.co.id/dummy2" class="btn btn-primary" target="_blank">Lihat di Shopee</a>
@@ -121,27 +71,27 @@
           </div>
           <div class="carousel-item">
             <img src="https://media.dekoruma.com/article/2018/11/30091038/freshome.jpg" class="d-block w-100" alt="Lampu Tidur Awan RGB">
-            <div class="carousel-caption d-block">
+            <div class="carousel-caption">
               <h5>Lampu Tidur Awan RGB</h5>
               <p>Bikin suasana kamar jadi cozy & aesthetic.</p>
               <a href="https://shopee.co.id/dummy3" class="btn btn-primary" target="_blank">Lihat di Shopee</a>
             </div>
           </div>
         </div>
-
+        <!-- Carousel Controls -->
         <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Sebelumnya</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Selanjutnya</span>
         </button>
       </div>
 
-      <!-- Scroll Down Button -->
-      <div class="scroll-down-btn mt-4">
-        <a href="#produk">
-          ↓ Lihat Lebih Banyak
-        </a>
+      <!-- Scroll Button -->
+      <div class="text-center scroll-down-btn">
+        <a href="#produk" class="btn btn-outline-primary mt-4">↓ Lihat Lebih Banyak</a>
       </div>
     </div>
   </section>
@@ -150,36 +100,21 @@
   <section id="produk" class="py-5 bg-light">
     <div class="container">
       <h2 class="text-center mb-4">Produk Unggulan</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card shadow-sm">
-            <img src="https://media.dekoruma.com/article/2018/11/30091038/freshome.jpg" class="card-img-top" alt="Produk 1">
-            <div class="card-body">
-              <h5 class="card-title">Dispenser Sabun Otomatis</h5>
-              <p class="card-text">Hemat sabun dan anti bakteri. Pas untuk kamar mandi kamu!</p>
-              <a href="https://shopee.co.id/dummy1" class="btn btn-primary w-100">Lihat di Shopee</a>
-            </div>
-          </div>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <img src="https://media.dekoruma.com/article/2018/11/30091038/freshome.jpg" class="img-fluid rounded mb-2" alt="Produk 1">
+          <h5>Dispenser Otomatis</h5>
+          <a href="https://shopee.co.id/dummy1" class="btn btn-sm btn-primary">Lihat Produk</a>
         </div>
-        <div class="col-md-4">
-          <div class="card shadow-sm">
-            <img src="https://media.dekoruma.com/article/2018/11/30091038/freshome.jpg" class="card-img-top" alt="Produk 2">
-            <div class="card-body">
-              <h5 class="card-title">Gunting Dapur 6 in 1</h5>
-              <p class="card-text">Cocok untuk dapur kecil yang butuh alat serbaguna!</p>
-              <a href="https://shopee.co.id/dummy2" class="btn btn-primary w-100">Lihat di Shopee</a>
-            </div>
-          </div>
+        <div class="col-md-4 mb-4">
+          <img src="https://media.dekoruma.com/article/2018/11/30091038/freshome.jpg" class="img-fluid rounded mb-2" alt="Produk 2">
+          <h5>Gunting Dapur Multifungsi</h5>
+          <a href="https://shopee.co.id/dummy2" class="btn btn-sm btn-primary">Lihat Produk</a>
         </div>
-        <div class="col-md-4">
-          <div class="card shadow-sm">
-            <img src="https://media.dekoruma.com/article/2018/11/30091038/freshome.jpg" class="card-img-top" alt="Produk 3">
-            <div class="card-body">
-              <h5 class="card-title">Lampu Tidur Awan RGB</h5>
-              <p class="card-text">Cahaya lembut bikin tidur makin nyenyak. Estetik banget!</p>
-              <a href="https://shopee.co.id/dummy3" class="btn btn-primary w-100">Lihat di Shopee</a>
-            </div>
-          </div>
+        <div class="col-md-4 mb-4">
+          <img src="https://media.dekoruma.com/article/2018/11/30091038/freshome.jpg" class="img-fluid rounded mb-2" alt="Produk 3">
+          <h5>Lampu Tidur RGB</h5>
+          <a href="https://shopee.co.id/dummy3" class="btn btn-sm btn-primary">Lihat Produk</a>
         </div>
       </div>
     </div>
