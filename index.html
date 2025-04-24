@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Barang Unik Serbaguna</title>
-  <!-- Menambahkan Bootstrap CSS dari CDN -->
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Menambahkan custom CSS -->
+  <!-- Custom CSS -->
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
@@ -18,7 +18,8 @@
         <img src="https://media.dekoruma.com/article/2018/11/30091038/freshome.jpg" alt="Logo" class="rounded-circle" width="40" height="40">
         Link Favoritku
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -34,14 +35,14 @@
   <!-- Hero Section with Carousel -->
   <section class="hero py-5">
     <div class="container">
-      <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="https://media.dekoruma.com/article/2018/11/30091038/freshome.jpg" class="d-block w-100" alt="Dispenser Sabun Otomatis">
             <div class="carousel-caption d-none d-md-block">
               <h5>Dispenser Sabun Otomatis</h5>
               <p>Sentuh tanpa tangan, cocok buat kamar mandi modern!</p>
-              <a href="https://shopee.co.id/dummy1" class="btn btn-primary" target="_blank">Lihat di Shopee</a>
+              <a href="https://shopee.co.id/dummy1" class="btn btn-light" target="_blank">Lihat di Shopee</a>
             </div>
           </div>
           <div class="carousel-item">
@@ -49,7 +50,7 @@
             <div class="carousel-caption d-none d-md-block">
               <h5>Gunting Dapur 6 in 1</h5>
               <p>Bisa motong, ngupas, bahkan buka botol. Multifungsi banget!</p>
-              <a href="https://shopee.co.id/dummy2" class="btn btn-primary" target="_blank">Lihat di Shopee</a>
+              <a href="https://shopee.co.id/dummy2" class="btn btn-light" target="_blank">Lihat di Shopee</a>
             </div>
           </div>
           <div class="carousel-item">
@@ -57,31 +58,30 @@
             <div class="carousel-caption d-none d-md-block">
               <h5>Lampu Tidur Awan RGB</h5>
               <p>Bikin suasana kamar jadi cozy & aesthetic.</p>
-              <a href="https://shopee.co.id/dummy3" class="btn btn-primary" target="_blank">Lihat di Shopee</a>
+              <a href="https://shopee.co.id/dummy3" class="btn btn-light" target="_blank">Lihat di Shopee</a>
             </div>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <span class="visually-hidden">Sebelumnya</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span class="visually-hidden">Berikutnya</span>
         </button>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-primary text-white py-4">
+  <footer class="bg-primary text-white py-4 mt-5">
     <div class="container text-center">
       <p>🧡 Dibuat dengan cinta untuk para pecinta barang unik | &copy; 2025</p>
     </div>
   </footer>
 
-  <!-- Menambahkan Bootstrap JS dan Popper.js dari CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <!-- Bootstrap Bundle JS (Popper included) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
