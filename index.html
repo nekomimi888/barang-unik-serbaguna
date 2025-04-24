@@ -4,61 +4,86 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Barang Unik Serbaguna</title>
-  <link rel="stylesheet" href="style.css" />
+  <!-- Menambahkan Bootstrap CSS dari CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <header>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-      <div class="logo">
-        <img src="https://media.dekoruma.com/article/2018/11/30091038/freshome.jpg" alt="Logo" class="logo-img"/>
-        <h1>Link Favoritku</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Produk</a></li>
-          <li><a href="#">Kontak</a></li>
+      <a class="navbar-brand" href="#">
+        <img src="https://media.dekoruma.com/article/2018/11/30091038/freshome.jpg" alt="Logo" class="rounded-circle" width="40" height="40">
+        Link Favoritku
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
         </ul>
-      </nav>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <section class="hero">
+  <!-- Hero Section -->
+  <section class="hero bg-warning py-5 text-center">
     <div class="container">
-      <h2>Temukan Barang Unik & Serbaguna untuk Kebutuhan Sehari-hari</h2>
-      <p>Cocok untuk membuat hidupmu lebih praktis dan menyenangkan.</p>
-    </div>
-  </section>
-
-  <section class="products">
-    <div class="container">
-      <div class="product-card">
-        <img src="https://github.com/nekomimi888/barang-unik-serbaguna/raw/main/placeholder.jpg" alt="Dispenser Sabun Otomatis">
-        <h3>Dispenser Sabun Otomatis</h3>
-        <p>Sentuh tanpa tangan, cocok buat kamar mandi modern!</p>
-        <a href="https://shopee.co.id/dummy1" target="_blank" class="btn">Lihat di Shopee</a>
-      </div>
-
-      <div class="product-card">
-        <img src="https://github.com/nekomimi888/barang-unik-serbaguna/raw/main/placeholder.jpg" alt="Gunting Dapur 6 in 1">
-        <h3>Gunting Dapur 6 in 1</h3>
-        <p>Bisa motong, ngupas, bahkan buka botol. Multifungsi banget!</p>
-        <a href="https://shopee.co.id/dummy2" target="_blank" class="btn">Lihat di Shopee</a>
-      </div>
-
-      <div class="product-card">
-        <img src="https://github.com/nekomimi888/barang-unik-serbaguna/raw/main/placeholder.jpg" alt="Lampu Tidur Awan RGB">
-        <h3>Lampu Tidur Awan RGB</h3>
-        <p>Bikin suasana kamar jadi cozy & aesthetic.</p>
-        <a href="https://shopee.co.id/dummy3" target="_blank" class="btn">Lihat di Shopee</a>
-      </div>
+      <h2 class="display-4">Temukan Barang Unik & Serbaguna untuk Kebutuhan Sehari-hari</h2>
+      <p class="lead">Cocok untuk membuat hidupmu lebih praktis dan menyenangkan.</p>
     </div>
   </section>
 
-  <footer>
+  <!-- Product Section -->
+  <section class="products py-5">
     <div class="container">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card">
+            <img src="https://github.com/nekomimi888/barang-unik-serbaguna/raw/main/placeholder.jpg" class="card-img-top" alt="Dispenser Sabun Otomatis">
+            <div class="card-body">
+              <h5 class="card-title">Dispenser Sabun Otomatis</h5>
+              <p class="card-text">Sentuh tanpa tangan, cocok buat kamar mandi modern!</p>
+              <a href="https://shopee.co.id/dummy1" class="btn btn-primary" target="_blank">Lihat di Shopee</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://github.com/nekomimi888/barang-unik-serbaguna/raw/main/placeholder.jpg" class="card-img-top" alt="Gunting Dapur 6 in 1">
+            <div class="card-body">
+              <h5 class="card-title">Gunting Dapur 6 in 1</h5>
+              <p class="card-text">Bisa motong, ngupas, bahkan buka botol. Multifungsi banget!</p>
+              <a href="https://shopee.co.id/dummy2" class="btn btn-primary" target="_blank">Lihat di Shopee</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="https://github.com/nekomimi888/barang-unik-serbaguna/raw/main/placeholder.jpg" class="card-img-top" alt="Lampu Tidur Awan RGB">
+            <div class="card-body">
+              <h5 class="card-title">Lampu Tidur Awan RGB</h5>
+              <p class="card-text">Bikin suasana kamar jadi cozy & aesthetic.</p>
+              <a href="https://shopee.co.id/dummy3" class="btn btn-primary" target="_blank">Lihat di Shopee</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white py-4">
+    <div class="container text-center">
       <p>🧡 Dibuat dengan cinta untuk para pecinta barang unik | &copy; 2025</p>
     </div>
   </footer>
+
+  <!-- Menambahkan Bootstrap JS dan Popper.js dari CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
