@@ -35,6 +35,25 @@
       display: flex !important;
     }
 
+    .scroll-down-btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .scroll-down-btn a {
+      text-decoration: none;
+      color: #ff6f00;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      font-size: 1.1rem;
+    }
+
+    .scroll-down-btn a:hover {
+      text-decoration: underline;
+    }
+
     @media (max-width: 768px) {
       .carousel-item img {
         max-height: 300px;
@@ -77,14 +96,12 @@
   <section class="hero py-5">
     <div class="container">
       <div id="productCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
-        <!-- Indicators -->
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+          <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active"></button>
           <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1"></button>
           <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2"></button>
         </div>
 
-        <!-- Slides -->
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="https://media.dekoruma.com/article/2018/11/30091038/freshome.jpg" class="d-block w-100" alt="Dispenser Sabun Otomatis">
@@ -112,20 +129,24 @@
           </div>
         </div>
 
-        <!-- Controls -->
         <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Sebelumnya</span>
+          <span class="carousel-control-prev-icon"></span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Selanjutnya</span>
+          <span class="carousel-control-next-icon"></span>
         </button>
+      </div>
+
+      <!-- Scroll Down Button -->
+      <div class="scroll-down-btn mt-4">
+        <a href="#produk">
+          ↓ Lihat Lebih Banyak
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Produk Grid -->
+  <!-- Produk Section -->
   <section id="produk" class="py-5 bg-light">
     <div class="container">
       <h2 class="text-center mb-4">Produk Unggulan</h2>
